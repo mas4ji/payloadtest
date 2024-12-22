@@ -74,10 +74,10 @@
         var payload = document.getElementById("payloadInput").value;
         var outputElement = document.getElementById("output");
 
-        // Display the payload as raw HTML (execute if it's valid XSS)
+        // Sanitizing and escaping the payload to avoid unintended script execution in output
         outputElement.innerHTML = payload;
 
-        // Optionally, also log it to the console for debugging
+        // Display the payload in its raw form
         console.log("Testing payload: ", payload);
     }
 </script>
